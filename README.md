@@ -5,5 +5,5 @@ Postman is a collaboration platform for API development. Postman's features simp
 # Download Postman
 https://www.postman.com/downloads/
 
-# Postman
+# Collections
 The postman collections I used before.
