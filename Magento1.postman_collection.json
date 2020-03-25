@@ -1,0 +1,1185 @@
+{
+	"info": {
+		"_postman_id": "724119db-16de-41ef-bf7e-1ba13c79afbe",
+		"name": "Magento1 SOAP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SOAP",
+			"item": [
+				{
+					"name": "Catalog",
+					"item": [
+						{
+							"name": "Catalog Category",
+							"item": [
+								{
+									"name": "catalog_category.tree",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryTree>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <parentId xsi:type=\"xsd:string\">1</parentId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryTree>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.create",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryCreate>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <parentId xsi:type=\"xsd:int\">1</parentId>\r\n            <categoryData>\r\n            \t<name xsi:type=\"xsd:string\">test</name>\r\n            \t<is_active xsi:type=\"xsd:int\">1</is_active>\r\n            \t<position xsi:type=\"xsd:int\">1</position>\r\n            \t<available_sort_by xsi:type=\"xsd:string\">position</available_sort_by>\r\n            \t<default_sort_by xsi:type=\"xsd:string\">position</default_sort_by>\r\n            \t<include_in_menu xsi:type=\"xsd:int\">1</include_in_menu>\r\n            </categoryData>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryCreate>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryCreate>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <categoryId xsi:type=\"xsd:int\">17</categoryId>\r\n            <categoryData>\r\n            \t<name xsi:type=\"xsd:string\">test</name>\r\n            \t<is_active xsi:type=\"xsd:int\">1</is_active>\r\n            \t<position xsi:type=\"xsd:int\">1</position>\r\n            \t<available_sort_by xsi:type=\"xsd:string\">position</available_sort_by>\r\n            \t<default_sort_by xsi:type=\"xsd:string\">position</default_sort_by>\r\n            \t<include_in_menu xsi:type=\"xsd:int\">1</include_in_menu>\r\n            </categoryData>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryCreate>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.delete",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryDelete>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <categoryId xsi:type=\"xsd:int\">17</categoryId>\r\n        </ns1:catalogCategoryDelete>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.info",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryInfo>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <categoryId xsi:type=\"xsd:int\">1</categoryId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryInfo>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.currentStore",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryCurrentStore>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryCurrentStore>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.level",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryLevel>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryLevel>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.removeProduct",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryRemoveProduct>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <categoryId xsi:type=\"xsd:int\">1</categoryId>\r\n            <productId xsi:type=\"xsd:string\">1</productId>\r\n            <identifierType xsi:type=\"xsd:string\">ID</identifierType>\r\n        </ns1:catalogCategoryRemoveProduct>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.updateProduct",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryUpdateProduct>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <categoryId xsi:type=\"xsd:int\">1</categoryId>\r\n            <productId xsi:type=\"xsd:string\">1</productId>\r\n            <position xsi:type=\"xsd:string\">1</position>\r\n            <identifierType xsi:type=\"xsd:string\">ID</identifierType>\r\n        </ns1:catalogCategoryUpdateProduct>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.assignProduct",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryAssignProduct>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <categoryId xsi:type=\"xsd:int\">1</categoryId>\r\n            <productId xsi:type=\"xsd:string\">1</productId>\r\n            <position xsi:type=\"xsd:string\">1</position>\r\n            <identifierType xsi:type=\"xsd:string\">ID</identifierType>\r\n        </ns1:catalogCategoryAssignProduct>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category.assignProducts",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryAssignedProducts>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <categoryId xsi:type=\"xsd:int\">1</categoryId>\r\n        </ns1:catalogCategoryAssignedProducts>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Catalog Category Attributes",
+							"item": [
+								{
+									"name": "catalog_category_attribute.currentStore",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryAttributeCurrentStore>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryAttributeCurrentStore>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category_attribute.list",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryAttributeList>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n        </ns1:catalogCategoryAttributeList>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_category_attribute.options",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogCategoryAttributeOptions>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <attributeId xsi:type=\"xsd:string\">41</attributeId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogCategoryAttributeOptions>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Catalog Product",
+							"item": [
+								{
+									"name": "catalog_product.currentStore",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogProductCurrentStore>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogProductCurrentStore>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_product.list",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogProductList>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n        </ns1:catalogProductList>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_product.info",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogProductInfo>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <productId xsi:type=\"xsd:string\">80</productId>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n            <identifierType xsi:type=\"xsd:string\">ID</identifierType>\r\n        </ns1:catalogProductInfo>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_product.getSpecialPrice",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogProductGetSpecialPrice>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <product xsi:type=\"xsd:string\">80</product>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n            <identifierType xsi:type=\"xsd:string\">ID</identifierType>\r\n        </ns1:catalogProductGetSpecialPrice>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_product.setSpecialPrice",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogProductSetSpecialPrice >\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <product xsi:type=\"xsd:string\">80</product>\r\n            <specialPrice xsi:type=\"xsd:string\">103</specialPrice>\r\n            <fromDate xsi:type=\"xsd:string\">2020-01-01 00:00:00</fromDate>\r\n            <toDate xsi:type=\"xsd:string\">2020-01-28 00:00:00</toDate>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n            <identifierType xsi:type=\"xsd:string\">ID</identifierType>\r\n        </ns1:catalogProductSetSpecialPrice >\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_product.listOfAdditionalAttributes",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogProductListOfAdditionalAttributes>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <productType xsi:type=\"xsd:string\">simple</productType>\r\n            <attributeSetId xsi:type=\"xsd:string\">4</attributeSetId>\r\n        </ns1:catalogProductListOfAdditionalAttributes>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "catalog_product.update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:catalogProductUpdate>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <product xsi:type=\"xsd:string\">80</product>\r\n            <productData xsi:type=\"typens:catalogProductCreateEntity\">\r\n\t\t\t\t<categories SOAP-ENC:arrayType=\"xsd:string\" xsi:type=\"ns1:ArrayOfString\">\r\n\t\t\t\t\t<item xsi:type=\"xsd:string\">1</item>\r\n\t\t\t\t</categories>\r\n\t\t\t\t<category_ids SOAP-ENC:arrayType=\"xsd:string\" xsi:type=\"ns1:ArrayOfString\">\r\n                    <item xsi:type=\"xsd:string\">1</item>\r\n                </category_ids>\r\n                <websites SOAP-ENC:arrayType=\"xsd:string\" xsi:type=\"ns1:ArrayOfString\">\r\n                    <item xsi:type=\"xsd:string\">1</item>\r\n                </websites>\r\n                <website_ids SOAP-ENC:arrayType=\"xsd:string\" xsi:type=\"ns1:ArrayOfString\">\r\n                    <item xsi:type=\"xsd:string\">1</item>\r\n                </website_ids>\r\n\t\t\t\t<tier_price SOAP-ENC:arrayType=\"ns1:catalogProductTierPriceEntity\" xsi:type=\"ns1:catalogProductTierPriceEntityArray\">\r\n\t\t\t\t\t<catalogProductTierPriceEntity>\r\n\t\t\t\t\t\t<customer_group_id xsi:type=\"xsd:string\">0</customer_group_id>\r\n\t\t\t\t\t\t<website xsi:type=\"xsd:string\">1</website>\r\n\t\t\t\t\t\t<qty xsi:type=\"xsd:int\">1</qty>\r\n\t\t\t\t\t\t<price xsi:type=\"xsd:double\">9.9</price>\t\t\t\t\t\t\r\n\t\t\t\t\t</catalogProductTierPriceEntity>\t\t\t\t\r\n\t\t\t\t</tier_price>\r\n            </productData>\r\n            <storeView xsi:type=\"xsd:string\">1</storeView>\r\n            <identifierType xsi:type=\"xsd:string\">ID</identifierType>\r\n        </ns1:catalogProductUpdate>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+										},
+										"url": {
+											"raw": "{{DEV_HOST}}/api/v2_soap/",
+											"host": [
+												"{{DEV_HOST}}"
+											],
+											"path": [
+												"api",
+												"v2_soap",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "SOAP-Login",
+					"protocolProfileBehavior": {
+						"followRedirects": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:login>\r\n            <username xsi:type=\"xsd:string\">username</username>\r\n            <apiKey xsi:type=\"xsd:string\">password</apiKey>\r\n        </ns1:login>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+						},
+						"url": {
+							"raw": "{{DEV_HOST}}/api/v2_soap",
+							"host": [
+								"{{DEV_HOST}}"
+							],
+							"path": [
+								"api",
+								"v2_soap"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP-订单列表",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:salesOrderList>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n        </ns1:salesOrderList>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+						},
+						"url": {
+							"raw": "{{DEV_HOST}}/api/v2_soap/",
+							"host": [
+								"{{DEV_HOST}}"
+							],
+							"path": [
+								"api",
+								"v2_soap",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP-订单详情",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:salesOrderInfo>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <orderIncrementId xsi:type=\"xsd:string\">100000037</orderIncrementId>\r\n        </ns1:salesOrderInfo>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+						},
+						"url": {
+							"raw": "{{DEV_HOST}}/api/v2_soap/",
+							"host": [
+								"{{DEV_HOST}}"
+							],
+							"path": [
+								"api",
+								"v2_soap",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP-订单hold",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:salesOrderHold>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <orderIncrementId xsi:type=\"xsd:string\">100000445</orderIncrementId>\r\n        </ns1:salesOrderHold>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+						},
+						"url": {
+							"raw": "{{DEV_HOST}}/api/v2_soap/",
+							"host": [
+								"{{DEV_HOST}}"
+							],
+							"path": [
+								"api",
+								"v2_soap",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP-订单unhold",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:salesOrderUnhold>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <orderIncrementId xsi:type=\"xsd:string\">100000445</orderIncrementId>\r\n        </ns1:salesOrderUnhold>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+						},
+						"url": {
+							"raw": "{{DEV_HOST}}/api/v2_soap/",
+							"host": [
+								"{{DEV_HOST}}"
+							],
+							"path": [
+								"api",
+								"v2_soap",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP-订单cancel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:salesOrderCancel>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <orderIncrementId xsi:type=\"xsd:string\">100000445</orderIncrementId>\r\n        </ns1:salesOrderCancel>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+						},
+						"url": {
+							"raw": "{{DEV_HOST}}/api/v2_soap/",
+							"host": [
+								"{{DEV_HOST}}"
+							],
+							"path": [
+								"api",
+								"v2_soap",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SOAP-订单addComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ns1=\"urn:Magento\"\r\n                   xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n                   xmlns:SOAP-ENC=\"http://schemas.xmlsoap.org/soap/encoding/\"\r\n                   SOAP-ENV:encodingStyle=\"http://schemas.xmlsoap.org/soap/encoding/\">\r\n    <SOAP-ENV:Body>\r\n        <ns1:salesOrderAddComment>\r\n            <sessionId xsi:type=\"xsd:string\">sessionId</sessionId>\r\n            <orderIncrementId xsi:type=\"xsd:string\">100000445</orderIncrementId>\r\n            <status xsi:type=\"xsd:string\">processing</status>\r\n            <comment xsi:type=\"xsd:string\">test</comment>\r\n            <notify xsi:type=\"xsd:string\">true</notify>\r\n        </ns1:salesOrderAddComment>\r\n    </SOAP-ENV:Body>\r\n</SOAP-ENV:Envelope>"
+						},
+						"url": {
+							"raw": "{{DEV_HOST}}/api/v2_soap/",
+							"host": [
+								"{{DEV_HOST}}"
+							],
+							"path": [
+								"api",
+								"v2_soap",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Paypal IPN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "discount",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "mc_gross_1",
+							"value": "79.96",
+							"type": "text"
+						},
+						{
+							"key": "mc_gross_2",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "mc_gross_3",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "insurance_amount",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "num_cart_items",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "payer_id",
+							"value": "YMCEG6LHZ37H6",
+							"type": "text"
+						},
+						{
+							"key": "address_country_code",
+							"value": "US",
+							"type": "text"
+						},
+						{
+							"key": "ipn_track_id",
+							"value": "7a7f4e8992725",
+							"type": "text"
+						},
+						{
+							"key": "address_zip",
+							"value": "45601",
+							"type": "text"
+						},
+						{
+							"key": "invoice",
+							"value": "100000443",
+							"type": "text"
+						},
+						{
+							"key": "charset",
+							"value": "gb2312",
+							"type": "text"
+						},
+						{
+							"key": "payment_gross",
+							"value": "79.96",
+							"type": "text"
+						},
+						{
+							"key": "address_status",
+							"value": "confirmed",
+							"type": "text"
+						},
+						{
+							"key": "shipping_discount",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "address_street",
+							"value": "street",
+							"type": "text"
+						},
+						{
+							"key": "contact_phone",
+							"value": "000-000-0000",
+							"type": "text"
+						},
+						{
+							"key": "receipt_id",
+							"value": "4763-4348-8966-8893",
+							"type": "text"
+						},
+						{
+							"key": "verify_sign",
+							"value": "sign value",
+							"type": "text"
+						},
+						{
+							"key": "tax1",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "tax2",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "tax3",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "mc_shipping",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "txn_type",
+							"value": "cart",
+							"type": "text"
+						},
+						{
+							"key": "receiver_id",
+							"value": "5L7NKA22PXX3E",
+							"type": "text"
+						},
+						{
+							"key": "payment_fee",
+							"value": "3.02",
+							"type": "text"
+						},
+						{
+							"key": "item_number1",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "item_number2",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "mc_currency",
+							"value": "USD",
+							"type": "text"
+						},
+						{
+							"key": "item_number3",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "transaction_subject",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "shipping_method",
+							"value": "Default",
+							"type": "text"
+						},
+						{
+							"key": "custom",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "protection_eligibility",
+							"value": "Ineligible",
+							"type": "text"
+						},
+						{
+							"key": "quantity1",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "quantity2",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "quantity3",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "address_country",
+							"value": "United States",
+							"type": "text"
+						},
+						{
+							"key": "payer_status",
+							"value": "unverified",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Firstname",
+							"type": "text"
+						},
+						{
+							"key": "item_name1",
+							"value": "Product Name",
+							"type": "text"
+						},
+						{
+							"key": "item_name2",
+							"value": "Tax",
+							"type": "text"
+						},
+						{
+							"key": "item_name3",
+							"value": "Shipping",
+							"type": "text"
+						},
+						{
+							"key": "address_name",
+							"value": "Firstname Lastname",
+							"type": "text"
+						},
+						{
+							"key": "mc_gross",
+							"value": "79.96",
+							"type": "text"
+						},
+						{
+							"key": "payment_date",
+							"value": "14:25:28 Jan 04, 2020 PST",
+							"type": "text"
+						},
+						{
+							"key": "payment_status",
+							"value": "Completed",
+							"type": "text"
+						},
+						{
+							"key": "business",
+							"value": "pay@pay.com",
+							"type": "text"
+						},
+						{
+							"key": "mc_handling",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Lastname",
+							"type": "text"
+						},
+						{
+							"key": "address_state",
+							"value": "OH",
+							"type": "text"
+						},
+						{
+							"key": "txn_id",
+							"value": "5A165287T17607157",
+							"type": "text"
+						},
+						{
+							"key": "mc_fee",
+							"value": "3.02",
+							"type": "text"
+						},
+						{
+							"key": "resend",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "payment_type",
+							"value": "instant",
+							"type": "text"
+						},
+						{
+							"key": "notify_version",
+							"value": "3.8",
+							"type": "text"
+						},
+						{
+							"key": "payer_email",
+							"value": "payer@yahoo.com",
+							"type": "text"
+						},
+						{
+							"key": "receiver_email",
+							"value": "pay@pay.com",
+							"type": "text"
+						},
+						{
+							"key": "address_city",
+							"value": "Chillicothe",
+							"type": "text"
+						},
+						{
+							"key": "tax",
+							"value": "0.00",
+							"type": "text"
+						},
+						{
+							"key": "residence_country",
+							"value": "US:",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/paypal/ipn/",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"paypal",
+						"ipn",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "钱海交易通知",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='UTF-8'?>\r\n<response>\r\n<notice_type>transaction</notice_type>\r\n<push_dateTime>2020-01-06 16:18:48</push_dateTime>\r\n<response_type>1</response_type>\r\n<account>account</account>\r\n<terminal>terminal</terminal>\r\n<signValue>signValue</signValue>\r\n<methods>Credit Card</methods>\r\n<order_number>100000445</order_number>\r\n<order_currency>USD</order_currency>\r\n<order_amount>86.45</order_amount>\r\n<order_notes></order_notes>\r\n<card_number>517805***7522</card_number>\r\n<card_type>MC</card_type>\r\n<payment_country>US</payment_country>\r\n<payment_id>payment id</payment_id>\r\n<payment_authType>0</payment_authType>\r\n<payment_status>0</payment_status>\r\n<payment_details>50008:Transaction canceled by customer</payment_details>\r\n<payment_risk></payment_risk>\r\n<payment_solutions></payment_solutions>\r\n<auth_reason>test</auth_reason>\r\n</response>"
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/opcsecreditcard/payment/notice",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"opcsecreditcard",
+						"payment",
+						"notice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "钱海退款通知",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='UTF-8'?>\r\n<response>\r\n<account>account</account>\r\n<terminal>terminal</terminal>\r\n<signValue>signValue</signValue>\r\n<payment_dateTime>2019-11-08 03:04:49</payment_dateTime>\r\n<push_dateTime>2020-01-06 19:15:43</push_dateTime>\r\n<order_number>100000445</order_number>\r\n<order_currency>USD</order_currency>\r\n<order_amount>86.45</order_amount>\r\n<order_notes></order_notes>\r\n<card_type>MC</card_type>\r\n<card_country>US</card_country>\r\n<payment_id>payment id</payment_id>\r\n<refund_number></refund_number>\r\n<refund_reference></refund_reference>\r\n<notice_type>refund</notice_type>\r\n<push_id>3782961</push_id>\r\n<push_status>1</push_status>\r\n<push_details>物流原因延迟送达/无法送达</push_details>\r\n</response>"
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/opcsecreditcard/payment/notice",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"opcsecreditcard",
+						"payment",
+						"notice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "钱海部分退款通知",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='UTF-8'?>\r\n<response>\r\n<account>account</account>\r\n<terminal>terminal</terminal>\r\n<signValue>signValue</signValue>\r\n<payment_dateTime>2019-11-08 03:04:49</payment_dateTime>\r\n<push_dateTime>2020-01-06 19:15:43</push_dateTime>\r\n<order_number>100000445</order_number>\r\n<order_currency>USD</order_currency>\r\n<order_amount>86.45</order_amount>\r\n<order_notes></order_notes>\r\n<card_type>MC</card_type>\r\n<card_country>US</card_country>\r\n<payment_id>payment id</payment_id>\r\n<refund_number></refund_number>\r\n<refund_reference></refund_reference>\r\n<notice_type>partialRefund</notice_type>\r\n<push_id>3782961</push_id>\r\n<push_status>1</push_status>\r\n<push_details>与客人协商一致退款</push_details>\r\n</response>"
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/opcsecreditcard/payment/notice",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"opcsecreditcard",
+						"payment",
+						"notice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "钱海拒付通知",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='UTF-8'?>\r\n<response>\r\n<account>account</account>\r\n<terminal>terminal</terminal>\r\n<signValue>signValue</signValue>\r\n<payment_dateTime>2019-11-08 03:04:49</payment_dateTime>\r\n<push_dateTime>2020-01-06 19:15:43</push_dateTime>\r\n<order_number>100000446</order_number>\r\n<order_currency>USD</order_currency>\r\n<order_amount>103.45</order_amount>\r\n<order_notes></order_notes>\r\n<card_type>MC</card_type>\r\n<card_country>US</card_country>\r\n<payment_id>200107161536930108613</payment_id>\r\n<refund_number></refund_number>\r\n<refund_reference></refund_reference>\r\n<notice_type>chargeBack</notice_type>\r\n<push_id>3782961</push_id>\r\n<push_status>1</push_status>\r\n<push_details>货物损坏/货不对版</push_details>\r\n</response>"
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/opcsecreditcard/payment/notice",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"opcsecreditcard",
+						"payment",
+						"notice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "钱海调单通知",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='UTF-8'?>\r\n<response>\r\n<account>account</account>\r\n<terminal>terminal</terminal>\r\n<signValue>signValue</signValue>\r\n<payment_dateTime>2019-11-08 03:04:49</payment_dateTime>\r\n<push_dateTime>2020-01-06 19:15:43</push_dateTime>\r\n<order_number>100000445</order_number>\r\n<order_currency>USD</order_currency>\r\n<order_amount>86.45</order_amount>\r\n<order_notes></order_notes>\r\n<card_type>MC</card_type>\r\n<card_country>US</card_country>\r\n<payment_id>payment id</payment_id>\r\n<refund_number></refund_number>\r\n<refund_reference></refund_reference>\r\n<notice_type>retrieval</notice_type>\r\n<push_id>3782961</push_id>\r\n<push_status>1</push_status>\r\n<push_details>欺诈交易</push_details>\r\n</response>"
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/opcsecreditcard/payment/notice",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"opcsecreditcard",
+						"payment",
+						"notice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "钱海取消调单通知",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='UTF-8'?>\r\n<response>\r\n<account>account</account>\r\n<terminal>terminal</terminal>\r\n<signValue>signValue</signValue>\r\n<payment_dateTime>2019-11-08 03:04:49</payment_dateTime>\r\n<push_dateTime>2020-01-06 19:15:43</push_dateTime>\r\n<order_number>100000445</order_number>\r\n<order_currency>USD</order_currency>\r\n<order_amount>86.45</order_amount>\r\n<order_notes></order_notes>\r\n<card_type>MC</card_type>\r\n<card_country>US</card_country>\r\n<payment_id>payment id</payment_id>\r\n<refund_number></refund_number>\r\n<refund_reference></refund_reference>\r\n<notice_type>reversal-retrieval</notice_type>\r\n<push_id>3782961</push_id>\r\n<push_status>1</push_status>\r\n<push_details>取消调单</push_details>\r\n</response>"
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/opcsecreditcard/payment/notice",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"opcsecreditcard",
+						"payment",
+						"notice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "钱海申诉通知",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version='1.0' encoding='UTF-8'?>\r\n<response>\r\n<account>account</account>\r\n<terminal>terminal</terminal>\r\n<signValue>signValue</signValue>\r\n<payment_dateTime>2019-11-08 03:04:49</payment_dateTime>\r\n<push_dateTime>2020-01-06 19:15:43</push_dateTime>\r\n<order_number>100000445</order_number>\r\n<order_currency>USD</order_currency>\r\n<order_amount>86.45</order_amount>\r\n<order_notes></order_notes>\r\n<card_type>MC</card_type>\r\n<card_country>US</card_country>\r\n<payment_id>payment id</payment_id>\r\n<refund_number></refund_number>\r\n<refund_reference></refund_reference>\r\n<notice_type>re-presentment</notice_type>\r\n<push_id>3782961</push_id>\r\n<push_status>1</push_status>\r\n<push_details>欺诈交易</push_details>\r\n</response>"
+				},
+				"url": {
+					"raw": "{{DEV_HOST}}/opcsecreditcard/payment/notice",
+					"host": [
+						"{{DEV_HOST}}"
+					],
+					"path": [
+						"opcsecreditcard",
+						"payment",
+						"notice"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
