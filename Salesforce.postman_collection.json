@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "de1a9b04-2104-4a4d-830a-9c1ba2990af8",
+		"name": "Salesforce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Oauth2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "Consumer Key",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "Consumer Secret",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "Username",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password+Security Token",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test.salesforce.com/services/oauth2/token",
+					"protocol": "https",
+					"host": [
+						"test",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service Query",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{Token Type}} {{Access Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://cs76.salesforce.com/services/data/v45.0/query?q=SELECT+Id+FROM+Product2+WHERE+ProductCode+%3D+%27SHIPPING%27+LIMIT+1",
+					"protocol": "https",
+					"host": [
+						"cs76",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v45.0",
+						"query"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "SELECT+Id+FROM+Product2+WHERE+ProductCode+%3D+%27SHIPPING%27+LIMIT+1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service sobjects product2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{Token Type}} {{Access Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Name",
+							"value": "Shipping",
+							"type": "text"
+						},
+						{
+							"key": "ProductCode",
+							"value": "SHIPPING",
+							"type": "text"
+						},
+						{
+							"key": "isActive",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://cs76.salesforce.com/services/data/v45.0/sobjects/Product2/",
+					"protocol": "https",
+					"host": [
+						"cs76",
+						"salesforce",
+						"com"
+					],
+					"path": [
+						"services",
+						"data",
+						"v45.0",
+						"sobjects",
+						"Product2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
